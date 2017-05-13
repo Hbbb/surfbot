@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start:dev": "./node_modules/.bin/nodemon --inspect app.js",
-    "start": "./node_modules/.bin/nodemon app.js"
+    "start": "node app.js"
   },
   "author": "Hbb",
   "license": "MIT"
