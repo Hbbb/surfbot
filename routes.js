@@ -18,11 +18,6 @@ module.exports = (app) => {
     });
   });
 
-  app.post('/ngrok', (req, res) => {
-    let commandArguments = req.body.text;
-    res.send(`Ngrok tunnel is up and running! Arguments: ${commandArguments}`);
-  });
-
   app.get('/oath', (req, res) => {
     if (!req.query.code) {
       console.log('Missing code query string param');
