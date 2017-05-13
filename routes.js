@@ -3,16 +3,17 @@ const surfline = require('./lib/surfline');
 const util = require('./util');
 
 module.exports = (app) => {
+  app.post('/surf', (req, res) => {
+    let report = surfline.getReport().then((reports) => {
+      let formattedReports = util.buildSlackMessage(reports);
+      res.send(formattedReports);
+    });
+  });
+
+  // NOTE: For debugging purposes to see the raw response
   app.get('/surf', (req, res) => {
     let report = surfline.getReport().then((reports) => {
-      let formattedReports = reports.map((report) => {
-        return util.formatSlackMessage({
-          color: 'blue',
-          title: 'Surf Report',
-          body: report.text
-        });
-      });
-
+      let formattedReports = util.buildSlackMessage(reports);
       res.send(formattedReports);
     });
   });

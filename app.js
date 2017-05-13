@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv').config();
 
 const config = require('./config');
 const mountRoutes = require('./routes');
