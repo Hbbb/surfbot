@@ -1,0 +1,22 @@
+{
+  "name": "surf-bot",
+  "version": "0.0.1",
+  "description": "a slack bot to check the surf",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.8",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon app.js"
+  },
+  "author": "Hbb",
+  "license": "MIT"
+}
