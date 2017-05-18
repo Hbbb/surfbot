@@ -3,7 +3,7 @@ const conditionColorMap = {};
 
 module.exports = {
   buildSlackMessage: (surfReports) => {
-    let reportAttachments = surfReports.map((report) => {
+    const reportAttachments = surfReports.map((report) => {
       return {title: report.name, pretext: report.longText, text: report.text, color: '#3081B8'}
     });
 
